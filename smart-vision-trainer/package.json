@@ -1,0 +1,45 @@
+{
+  "name": "smart-vision-trainer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser-only vision lab: zero-shot COCO-SSD / BlazeFace / MediaPipe Hands detection plus in-browser transfer learning of custom classes on frozen MobileNet V2 features.",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node scripts/fetch-models.mjs --soft",
+    "fetch-models": "node scripts/fetch-models.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mediapipe/face_detection": "~0.4.1646425229",
+    "@mediapipe/hands": "~0.4.1675469240",
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow-models/face-detection": "^1.0.3",
+    "@tensorflow-models/hand-pose-detection": "^2.0.1",
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs": "4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "4.22.0",
+    "@tensorflow/tfjs-converter": "4.22.0",
+    "@tensorflow/tfjs-core": "4.22.0",
+    "@tensorflow/tfjs-layers": "4.22.0",
+    "jszip": "^3.10.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^6.2.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
