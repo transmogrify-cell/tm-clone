@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-slate-100 font-sans text-slate-900 antialiased;
+  }
+  /* Number inputs: keep the spinners small and consistent. */
+  input[type='number'] {
+    font-variant-numeric: tabular-nums;
+  }
+}
